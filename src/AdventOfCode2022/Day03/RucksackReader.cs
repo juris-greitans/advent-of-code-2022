@@ -10,7 +10,7 @@ public class RucksackReader {
         _reader = reader;
     }
 
-    public async Task<IEnumerable<Rucksack>> ReadRucksacks()
+    public async Task<IList<Rucksack>> ReadRucksacks()
     {
         var result = new List<Rucksack>();
         for(var line = await _reader.ReadLineAsync(); line != null; line = await _reader.ReadLineAsync()) {

@@ -24,4 +24,16 @@ public class RucksackTests {
         var rucksack = new Rucksack(contents);
         rucksack.GetPriorityOfFirstDuplicateItem().ShouldBe(expected);
     }
+
+    [Theory]
+    [
+        InlineData("abcdefghijkf", "lmnolqra", 'a'),
+    ]
+    public void FindMatchingItems_FindsCorrectItem(string first, string second, char expected) {
+        var rucksack = new Rucksack(first);
+        var actual = rucksack.FindMatchingItems(second);
+
+        actual.Length.ShouldBe(1);
+        actual[0].ShouldBe(expected);
+    }
 }

@@ -3,8 +3,10 @@ using System.Text;
 namespace AdventOfCode2022.Day03.Models;
 
 public class Rucksack {
+    public string Contents {get;}
     private readonly string[] _compartments;
     public Rucksack(string contents) {
+        Contents = contents;
         _compartments = new string[2]
         {
             contents.Substring(0, contents.Length / 2),
@@ -24,9 +26,17 @@ public class Rucksack {
 
     public int GetPriorityOfFirstDuplicateItem() {
         var ch = FindFirstDuplicateItem();
-        if (Char.IsAsciiLetterUpper(ch)) {
-            return (int)ch - 38;
+        return ch.GetPriority();
+    }
+
+    public string FindMatchingItems(string otherContents) {
+        var result = new StringBuilder();
+        foreach (var item in otherContents)
+        {
+            if (Contents.Contains(item)) {
+                result.Append(item);
+            }
         }
-        return (int)ch - 96;
+        return result.ToString();
     }
 }

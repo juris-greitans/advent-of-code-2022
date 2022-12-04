@@ -28,4 +28,5 @@ async Task Day02() {
 async Task Day03() {
     Console.WriteLine("Day 3");
     Console.WriteLine($"\tSum of priorities of duplicate items: {await RucksackReorganizer.GetPrioritySumOfDuplicateItems()}");
+    Console.WriteLine($"\tSum of priorities of group badges: {await RucksackReorganizer.GetPrioritySumOfGroupBadges()}");
 }
