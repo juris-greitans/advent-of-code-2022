@@ -3,10 +3,12 @@ using AdventOfCode2022.Day01;
 using AdventOfCode2022.Day02;
 using AdventOfCode2022.Day02.Enums;
 using AdventOfCode2022.Day03;
+using AdventOfCode2022.Day04;
 
 await Day01();
 await Day02();
 await Day03();
+await Day04();
 
 async Task Day01() {
     Console.WriteLine("Day 1");
@@ -29,4 +31,9 @@ async Task Day03() {
     Console.WriteLine("Day 3");
     Console.WriteLine($"\tSum of priorities of duplicate items: {await RucksackReorganizer.GetPrioritySumOfDuplicateItems()}");
     Console.WriteLine($"\tSum of priorities of group badges: {await RucksackReorganizer.GetPrioritySumOfGroupBadges()}");
+}
+
+async Task Day04() {
+    Console.WriteLine("Day 4");
+    Console.WriteLine($"\tNumber of overlapping assignments: {await CampCleanup.GetFullyOverlappingAssignments()}");
 }
