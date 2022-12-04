@@ -18,5 +18,6 @@ async Task Day01() {
 
 async Task Day02() {
     Console.WriteLine("Day 2");
-    Console.WriteLine($"\tTotal score of Rock Paper Scissors game: {await RockPaperScissors.GetTotalScore()}");
+    Console.WriteLine($"\tTotal score of Rock Paper Scissors game (version 1): {await RockPaperScissors.GetTotalScoreVersion1()}");
+    Console.WriteLine($"\tTotal score of Rock Paper Scissors game (version 2): {await RockPaperScissors.GetTotalScoreVersion2()}");
 }
