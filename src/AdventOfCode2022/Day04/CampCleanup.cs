@@ -9,4 +9,11 @@ public static class CampCleanup {
         var overlappingPairs = pairs.Where(pair => pair.Item1.Contains(pair.Item2) || pair.Item2.Contains(pair.Item1));
         return overlappingPairs.Count();
     }
+
+    public static async Task<int> GetOverlappingAssignments() {
+        var reader = new AssignmentPairReader(InputUtils.GetTextReader(4));
+        var pairs = await reader.ReadAssignmentPairs();
+        var overlappingPairs = pairs.Where(pair => pair.Item1.Overlaps(pair.Item2) || pair.Item2.Overlaps(pair.Item1));
+        return overlappingPairs.Count();
+    }
 }

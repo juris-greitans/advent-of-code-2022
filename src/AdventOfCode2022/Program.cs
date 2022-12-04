@@ -36,4 +36,5 @@ async Task Day03() {
 async Task Day04() {
     Console.WriteLine("Day 4");
     Console.WriteLine($"\tNumber of fully containing assignments: {await CampCleanup.GetFullyContainingAssignments()}");
+    Console.WriteLine($"\tNumber of overlapping assignments: {await CampCleanup.GetOverlappingAssignments()}");
 }

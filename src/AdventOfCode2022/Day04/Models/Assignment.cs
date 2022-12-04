@@ -14,4 +14,10 @@ public class Assignment {
         return _firstSection <= other._firstSection &&
             _lastSection >= other._lastSection;
     }
+
+    public bool Overlaps(Assignment other) {
+        return (_firstSection >= other._firstSection && _firstSection <= other._lastSection) ||
+            (_lastSection >= other._firstSection && _lastSection <= other._lastSection) ||
+            (_firstSection <= other._firstSection && _lastSection >= other._lastSection);
+    }
 }
