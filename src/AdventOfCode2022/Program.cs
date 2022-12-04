@@ -1,7 +1,9 @@
 ﻿using AdventOfCode2022.Common;
 using AdventOfCode2022.Day01;
+using AdventOfCode2022.Day02;
 
 await Day01();
+await Day02();
 
 async Task Day01() {
     Console.WriteLine("Day 1");
@@ -12,4 +14,9 @@ async Task Day01() {
     using var textReader2 = InputUtils.GetTextReader(1);
     var calorieCounter2 = new CalorieCounter(new CaloriesReader(textReader2));
     Console.WriteLine($"\tSum of top 3 calories: {await calorieCounter2.GetMostCaloriesForTopN(3)}");
+}
+
+async Task Day02() {
+    Console.WriteLine("Day 2");
+    Console.WriteLine($"\tTotal score of Rock Paper Scissors game: {await RockPaperScissors.GetTotalScore()}");
 }

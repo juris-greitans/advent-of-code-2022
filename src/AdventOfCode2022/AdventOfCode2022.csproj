@@ -8,6 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Day01\input.txt"/>
+    <EmbeddedResource Include="Day*\input.txt"/>
   </ItemGroup>
 </Project>
