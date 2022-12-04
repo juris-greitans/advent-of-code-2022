@@ -14,4 +14,25 @@ public class CalorieCounter
         var list = await _reader.ReadCaloryList();
         return list.Select(item => item.TotalCalories).Max();
     }
+
+    public async Task<long> GetMostCaloriesForTopN(int n)
+    {
+        var top = new long[n];
+        var smallestTopIndex = 0;
+
+        var list = await _reader.ReadCaloryList();
+        foreach (var item in list)
+        {
+            if (item.TotalCalories > top[smallestTopIndex]) {
+                top[smallestTopIndex] = item.TotalCalories;
+                for (var i = 0; i < top.Length; i++)
+                {
+                    if (top[i] < top[smallestTopIndex]) {
+                        smallestTopIndex = i;
+                    }
+                }
+            }
+        }
+        return top.Sum();
+    }
 }
