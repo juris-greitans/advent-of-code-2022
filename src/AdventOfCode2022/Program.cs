@@ -1,6 +1,7 @@
 ﻿using AdventOfCode2022.Common;
 using AdventOfCode2022.Day01;
 using AdventOfCode2022.Day02;
+using AdventOfCode2022.Day02.Enums;
 
 await Day01();
 await Day02();
@@ -18,6 +19,6 @@ async Task Day01() {
 
 async Task Day02() {
     Console.WriteLine("Day 2");
-    Console.WriteLine($"\tTotal score of Rock Paper Scissors game (version 1): {await RockPaperScissors.GetTotalScoreVersion1()}");
-    Console.WriteLine($"\tTotal score of Rock Paper Scissors game (version 2): {await RockPaperScissors.GetTotalScoreVersion2()}");
+    Console.WriteLine($"\tTotal score of Rock Paper Scissors game (version 1): {await RockPaperScissors.GetTotalScore(StrategyGuideFormat.Player1AndPlayer2)}");
+    Console.WriteLine($"\tTotal score of Rock Paper Scissors game (version 2): {await RockPaperScissors.GetTotalScore(StrategyGuideFormat.Player1AndOutcome)}");
 }
