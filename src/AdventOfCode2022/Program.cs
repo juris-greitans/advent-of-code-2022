@@ -43,5 +43,6 @@ async Task Day04() {
 
 async Task Day05() {
     Console.WriteLine("Day 5");
-    Console.WriteLine($"\tTop crates: {await SupplyStacks.Rearrange()}");
+    Console.WriteLine($"\tTop crates: {await SupplyStacks.Rearrange(new Crane())}");
+    Console.WriteLine($"\tTop crates (CrateMover 9001): {await SupplyStacks.Rearrange(new Crane2())}");
 }
