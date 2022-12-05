@@ -4,11 +4,13 @@ using AdventOfCode2022.Day02;
 using AdventOfCode2022.Day02.Enums;
 using AdventOfCode2022.Day03;
 using AdventOfCode2022.Day04;
+using AdventOfCode2022.Day05;
 
 await Day01();
 await Day02();
 await Day03();
 await Day04();
+await Day05();
 
 async Task Day01() {
     Console.WriteLine("Day 1");
@@ -37,4 +39,9 @@ async Task Day04() {
     Console.WriteLine("Day 4");
     Console.WriteLine($"\tNumber of fully containing assignments: {await CampCleanup.GetFullyContainingAssignments()}");
     Console.WriteLine($"\tNumber of overlapping assignments: {await CampCleanup.GetOverlappingAssignments()}");
+}
+
+async Task Day05() {
+    Console.WriteLine("Day 5");
+    Console.WriteLine($"\tTop crates: {await SupplyStacks.Rearrange()}");
 }
