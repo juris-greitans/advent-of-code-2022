@@ -5,12 +5,14 @@ using AdventOfCode2022.Day02.Enums;
 using AdventOfCode2022.Day03;
 using AdventOfCode2022.Day04;
 using AdventOfCode2022.Day05;
+using AdventOfCode2022.Day06;
 
 await Day01();
 await Day02();
 await Day03();
 await Day04();
 await Day05();
+await Day06();
 
 async Task Day01() {
     Console.WriteLine("Day 1");
@@ -45,4 +47,10 @@ async Task Day05() {
     Console.WriteLine("Day 5");
     Console.WriteLine($"\tTop crates: {await SupplyStacks.Rearrange(new Crane())}");
     Console.WriteLine($"\tTop crates (CrateMover 9001): {await SupplyStacks.Rearrange(new Crane2())}");
+}
+
+async Task Day06() {
+    Console.WriteLine("Day 6");
+    Console.WriteLine($"\t# of characters before start of packet: {await TuningTrouble.GetNumberOfCharactersBeforePacket(4)}");
+    Console.WriteLine($"\t# of characters before start of message: {await TuningTrouble.GetNumberOfCharactersBeforePacket(14)}");
 }
