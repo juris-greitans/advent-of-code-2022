@@ -7,6 +7,7 @@ using AdventOfCode2022.Day04;
 using AdventOfCode2022.Day05;
 using AdventOfCode2022.Day06;
 using AdventOfCode2022.Day07;
+using AdventOfCode2022.Day08;
 
 await Day01();
 await Day02();
@@ -15,6 +16,7 @@ await Day04();
 await Day05();
 await Day06();
 await Day07();
+await Day08();
 
 async Task Day01() {
     Console.WriteLine("Day 1");
@@ -61,4 +63,10 @@ async Task Day07() {
     Console.WriteLine("Day 7");
     Console.WriteLine($"\tSum of total sizes of directories with sizes of at most 100000: {await NoSpaceLeftOnDevice.GetTotalSizeOfDirectoriesSmallerThan(100001)}");
     Console.WriteLine($"\tTotal size of smallest directory to delete: {await NoSpaceLeftOnDevice.FreeUpSpace(70000000, 30000000)}");
+}
+
+async Task Day08() {
+    Console.WriteLine("Day 8");
+    Console.WriteLine($"\tNumber of visible trees: {await TreetopTreeHouse.GetNumberOfVisibleTrees()}");
+    Console.WriteLine($"\tBest scenic score: {await TreetopTreeHouse.GetBestScenicScore()}");
 }
